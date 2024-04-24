@@ -13,7 +13,7 @@ function startHero() {
 
 function rateHero(xp) {
     let rank = '';
-    if (xp <= 1000) { // corrigido para de < para <=
+    if (xp <= 1000) { // corrigido de < para <=
         rank = 'Ferro';
     }
     else if (xp >= 1001 && xp <= 2000) {
@@ -45,6 +45,10 @@ function outputMessage(hero) {
     console.log(`O Herói de nome ${hero['name']} está no nível de ${hero['level']}`);
 }
 
-startHero();
-rateHero(hero['xp']);
-outputMessage(hero);
+function main() {
+    startHero();
+    rateHero(hero['xp']);
+    outputMessage(hero);
+}
+
+main();
